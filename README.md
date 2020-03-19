@@ -1,2 +1,2 @@
-# Wall Kube
+# WallKube
 Wallpapers application for everyone.
