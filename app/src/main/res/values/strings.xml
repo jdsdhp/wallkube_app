@@ -1,0 +1,33 @@
+<resources>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="app_name">WallKube</string>
+    <string name="dev_name">jesusd0897</string>
+
+    <string name="search_hint_text">Search...</string>
+    <string name="share">Share</string>
+    <string name="details">Details</string>
+    <string name="set_wallpaper">Set as Wallpaper</string>
+    <string name="app_subtitle">Wallpapers  for everyone...</string>
+    <string name="about">About us</string>
+    <string name="support">Support</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="set_wallpaper_done">Wallpaper updated!!</string>
+    <string name="sections">Sections</string>
+    <string name="favorites">Favorites</string>
+    <string name="licenses">Licenses</string>
+    <string name="settings">Settings</string>
+    <string name="action_dark_mode">Dark Mode</string>
+</resources>

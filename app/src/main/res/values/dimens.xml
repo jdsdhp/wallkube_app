@@ -1,0 +1,33 @@
+<resources>
+    <!--Padding & Margin-->
+    <dimen name="dim_padding_very_small">4dp</dimen>
+    <dimen name="dim_padding_small">8dp</dimen>
+    <dimen name="dim_padding">16dp</dimen>
+    <dimen name="dim_padding_medium">24dp</dimen>
+    <dimen name="dim_padding_big">32dp</dimen>
+    <dimen name="dim_padding_really_big">48dp</dimen>
+
+    <dimen name="dim_margin_very_small">4dp</dimen>
+    <dimen name="dim_margin_small">8dp</dimen>
+    <dimen name="dim_margin">16dp</dimen>
+    <dimen name="dim_margin_medium">24dp</dimen>
+    <dimen name="dim_margin_big">32dp</dimen>
+    <dimen name="dim_margin_really_big">48dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!--Texts-->
+    <dimen name="dim_text_title">24sp</dimen>
+    <dimen name="dim_text_accent">18sp</dimen>
+    <dimen name="dim_text_subtitle">16sp</dimen>
+    <dimen name="dim_text_default">14sp</dimen>
+    <dimen name="dim_text_small">12sp</dimen>
+    <dimen name="dim_text_title_item">@dimen/dim_text_accent</dimen>
+    <dimen name="dim_card_corner_radius">6dp</dimen>
+    <dimen name="dim_dashboard_elevation_item">0dp</dimen>
+    <dimen name="dim_avatar">100dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+</resources>

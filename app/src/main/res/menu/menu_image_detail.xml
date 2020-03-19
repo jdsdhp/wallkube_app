@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_share"
+        android:icon="@drawable/ic_share_black_24dp"
+        android:title="@string/share"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_wallpaper"
+        android:icon="@drawable/ic_wallpaper_black_24dp"
+        android:title="@string/set_wallpaper"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_info"
+        android:icon="@drawable/ic_info_outline_black_24dp"
+        android:title="@string/details"
+        app:showAsAction="never" />
+
+</menu>

@@ -1,0 +1,72 @@
+<resources>
+
+    <!-- Base application Theme. -->
+    <style name="AppTheme.Basic" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:fontFamily">@font/dosis_regular</item>
+    </style>
+
+    <!-- Dark Theme. -->
+    <style name="AppTheme.Dark" parent="AppTheme.Basic">
+        <item name="colorPrimary">@color/color_my_dark</item>
+        <item name="colorPrimaryDark">@color/color_my_dark</item>
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="colorSecondary">@color/color_my_dark_secondary</item>
+        <item name="android:colorBackground">@color/color_my_dark</item>
+        <item name="android:textColor">@color/color_my_dark_text</item>
+        <item name="android:textColorPrimary">@color/color_my_dark_text</item>
+        <item name="android:textColorSecondary">@color/color_my_dark_text_secondary</item>
+        <item name="itemTextColor">@color/color_my_dark_text</item>
+        <item name="android:statusBarColor">@color/color_my_dark</item>
+    </style>
+
+    <!-- Light Theme. -->
+    <style name="AppTheme.Light" parent="AppTheme.Basic">
+        <item name="colorPrimary">@color/color_my_light</item>
+        <item name="colorPrimaryDark">@color/color_my_light</item>
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="colorSecondary">@color/color_my_light_secondary</item>
+        <item name="android:colorBackground">@color/color_my_light</item>
+        <item name="android:textColor">@color/color_my_light_text</item>
+        <item name="android:textColorPrimary">@color/color_my_light_text</item>
+        <item name="android:textColorSecondary">@color/color_my_light_text_secondary</item>
+        <item name="itemTextColor">@color/color_my_light_text</item>
+        <item name="android:statusBarColor">@color/color_my_light</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <!-- Picture Viewer Theme. -->
+    <style name="AppTheme.DarkViewer" parent="AppTheme.Dark">
+        <item name="android:statusBarColor">@color/color_my_dark_overlay_40</item>
+        <item name="android:navigationBarColor">@color/color_my_dark_overlay_40</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark" />
+
+    <!--Toolbars -->
+
+    <style name="MyToolbarTextAppearance.Title" parent="Base.TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">@dimen/dim_text_title</item>
+        <item name="android:textColor">?android:textColor</item>
+        <item name="android:fontFamily">@font/dosis_bold</item>
+    </style>
+
+    <style name="MyToolbarTextAppearance.Subtitle" parent="Base.TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
+        <item name="android:textSize">@dimen/dim_text_default</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+    </style>
+
+    <style name="MyToolbar" parent="Base.V7.Widget.AppCompat.Toolbar">
+        <item name="titleTextAppearance">@style/MyToolbarTextAppearance.Title</item>
+        <item name="subtitleTextAppearance">@style/MyToolbarTextAppearance.Subtitle</item>
+        <item name="navigationIcon">@drawable/ic_short_text_black_24dp</item>
+    </style>
+
+    <style name="MyToolbarBackAction" parent="MyToolbar">
+        <item name="navigationIcon">@drawable/ic_arrow_back_black_24dp</item>
+    </style>
+
+</resources>

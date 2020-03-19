@@ -1,0 +1,35 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group
+        android:id="@+id/menu_group"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/action_sections"
+            android:checked="true"
+            android:icon="@drawable/ic_collections_black_24dp"
+            android:title="@string/sections" />
+        <item
+            android:id="@+id/action_favorites"
+            android:icon="@drawable/ic_folder_special_black_24dp"
+            android:title="@string/favorites" />
+    </group>
+
+    <item android:title="@string/support">
+        <menu>
+            <item
+                android:id="@+id/action_dark_mode"
+                android:icon="@drawable/ic_brightness_4_black_24dp"
+                android:title="@string/action_dark_mode"
+                app:actionViewClass="androidx.appcompat.widget.SwitchCompat" />
+            <item
+                android:id="@+id/action_licenses"
+                android:icon="@drawable/ic_developer_mode_black_24dp"
+                android:title="@string/licenses" />
+            <item
+                android:id="@+id/action_about"
+                android:icon="@drawable/ic_info_outline_black_24dp"
+                android:title="@string/about" />
+        </menu>
+    </item>
+
+</menu>
