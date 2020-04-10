@@ -1,0 +1,16 @@
+<resources>
+
+    <string name="language">Language</string>
+    <string name="language_summary">Select a language for all application.</string>
+    <string-array name="language_values">
+        <item>Spanish</item>
+        <item>English</item>
+    </string-array>
+
+    <string name="theme">Theme</string>
+    <string name="theme_summary">Activate dark theme.</string>
+
+    <string name="settings_help">Help</string>
+    <string name="settings_about">About us</string>
+
+</resources>

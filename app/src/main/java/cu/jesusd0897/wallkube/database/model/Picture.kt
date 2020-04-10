@@ -9,6 +9,7 @@ import androidx.room.PrimaryKey
 import cu.jesusd0897.wallkube.database.PictureColumns
 import cu.jesusd0897.wallkube.database.SectionColumns
 import cu.jesusd0897.wallkube.database.Tables
+import cu.jesusd0897.wallkube.model.Model
 
 @Entity(
     tableName = Tables.PICTURES,
@@ -25,7 +26,7 @@ data class Picture(
     @field:ColumnInfo(name = PictureColumns.INFO) var info: String?,
     @field:ColumnInfo(name = PictureColumns.PUBLISHED_BY) var publishedBy: String?,
     @field:ColumnInfo(name = PictureColumns.FAVORITE, defaultValue = "0") var isFavorite: Boolean
-) : Parcelable {
+) : Model {
 
     @PrimaryKey(autoGenerate = true)
     @field:ColumnInfo(name = PictureColumns.ID)
@@ -42,6 +43,8 @@ data class Picture(
     ) {
         id = parcel.readInt()
     }
+
+    override fun match(query: String?): Boolean = true
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeInt(sectionId)

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:foreground="?selectableItemBackgroundBorderless"
+    app:cardBackgroundColor="?colorSecondary"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/picture_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:minHeight="@dimen/dim_default_item_placeholder_size"
+        android:scaleType="centerCrop"
+        android:transitionName="picture_view"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/more_action_btn"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="@dimen/dim_margin_small"
+        android:background="@drawable/shape_round"
+        android:padding="@dimen/dim_padding_small"
+        app:srcCompat="@drawable/ic_more_horiz_black_24dp" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/fav_indicator"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_gravity="start|top"
+        android:layout_margin="@dimen/dim_margin_small"
+        android:background="@drawable/shape_round"
+        android:padding="@dimen/dim_padding_very_small"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/ic_star_black_24dp" />
+
+</androidx.cardview.widget.CardView>
+

@@ -16,15 +16,15 @@
         android:id="@+id/toolbar_container"
         android:layout_width="match_parent"
         android:layout_height="72dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/gradient_top_bottom_110">
+        android:background="@drawable/gradient_top_bottom">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
-            style="@style/MyToolbarBackAction"
+            style="@style/MyToolbarBackAction.Big"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:theme="@style/AppTheme.AppBarOverlay"
+            android:layout_height="56dp"
+            android:layout_marginTop="24dp"
+            android:background="@android:color/transparent"
             app:menu="@menu/menu_image_detail" />
 
     </FrameLayout>

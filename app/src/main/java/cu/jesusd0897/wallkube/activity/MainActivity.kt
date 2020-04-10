@@ -13,12 +13,13 @@ import com.google.android.material.navigation.NavigationView
 import cu.jesusd0897.wallkube.R
 import cu.jesusd0897.wallkube.fragment.FavoritesFragment
 import cu.jesusd0897.wallkube.fragment.SectionsFragment
-import cu.jesusd0897.wallkube.util.replaceFragmentView
+import cu.jesusd0897.wallkube.util.KNav
 
-class MainActivity : ThemedActivity(), NavigationView.OnNavigationItemSelectedListener {
+class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     private lateinit var toolbar: Toolbar
     private lateinit var drawer: DrawerLayout
+    private var fragmentOrder = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,8 +27,6 @@ class MainActivity : ThemedActivity(), NavigationView.OnNavigationItemSelectedLi
         toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
         toolbar.setNavigationOnClickListener { onBackPressed() }
-        toolbar.title = getString(R.string.sections)
-
         drawer = findViewById(R.id.drawer_layout)
         val navigationView = findViewById<NavigationView>(R.id.nav_view)
         val toggle = ActionBarDrawerToggle(
@@ -44,10 +43,32 @@ class MainActivity : ThemedActivity(), NavigationView.OnNavigationItemSelectedLi
             else drawer.openDrawer(GravityCompat.START)
         }
         navigationView.setNavigationItemSelectedListener(this)
-        replaceFragmentView(supportFragmentManager, SectionsFragment.newInstance(), R.id.container)
+
+        if (savedInstanceState != null && savedInstanceState.getInt(
+                KNav.EXTRA_POSITION_TAG,
+                0
+            ) != 0
+        ) {
+            toolbar.title = getString(R.string.favorites)
+            fragmentOrder = 1
+            KNav.replaceFragment(
+                supportFragmentManager, FavoritesFragment.newInstance(), R.id.container
+            )
+        } else {
+            toolbar.title = getString(R.string.sections)
+            fragmentOrder = 0
+            KNav.replaceFragment(
+                supportFragmentManager, SectionsFragment.newInstance(), R.id.container
+            )
+        }
     }
 
-    override fun onNavigationItemSelected(@NonNull menuItem: MenuItem): Boolean { // Handle navigation view item clicks here.
+    override fun onSaveInstanceState(savedInstanceState: Bundle) {
+        savedInstanceState.putInt(KNav.EXTRA_POSITION_TAG, fragmentOrder)
+        super.onSaveInstanceState(savedInstanceState)
+    }
+
+    override fun onNavigationItemSelected(@NonNull menuItem: MenuItem): Boolean {
         val id: Int = menuItem.itemId
         Handler().postDelayed({ handleNavSelected(id) }, 250)
         drawer.closeDrawer(GravityCompat.START)
@@ -63,18 +84,21 @@ class MainActivity : ThemedActivity(), NavigationView.OnNavigationItemSelectedLi
         when (itemId) {
             R.id.action_sections -> {
                 toolbar.title = getString(R.string.sections)
-                replaceFragmentView(
+                fragmentOrder = 0
+                KNav.replaceFragment(
                     supportFragmentManager, SectionsFragment.newInstance(), R.id.container
                 )
             }
             R.id.action_favorites -> {
                 toolbar.title = getString(R.string.favorites)
-                replaceFragmentView(
+                fragmentOrder = 1
+                KNav.replaceFragment(
                     supportFragmentManager, FavoritesFragment.newInstance(), R.id.container
                 )
             }
-            R.id.action_dark_mode -> {
-                switchTheme()
+            R.id.action_settings -> {
+                KNav.navToSettings(this)
+                finish()
             }
         }
     }

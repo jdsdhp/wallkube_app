@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:paddingStart="@dimen/dim_padding_medium"
+        android:paddingTop="@dimen/dim_padding"
+        android:paddingEnd="@dimen/dim_padding_medium"
+        android:paddingBottom="@dimen/dim_padding"
+        android:text="@string/select"
+        android:textColor="?android:textColorSecondary"
+        android:textSize="@dimen/dim_text_accent"
+        android:textStyle="bold"
+        tools:text="@tools:sample/lorem" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/action_mark_has_favorite"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_star_border_black2_24dp"
+        android:drawablePadding="@dimen/dim_padding"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/dim_padding_medium"
+        android:paddingTop="@dimen/dim_padding"
+        android:paddingEnd="@dimen/dim_padding_medium"
+        android:paddingBottom="@dimen/dim_padding"
+        android:text="@string/mark_has_favorite"
+        android:textAllCaps="false" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/action_share"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_share_black_24dp"
+        android:drawablePadding="@dimen/dim_padding"
+        android:gravity="center_vertical"
+        android:padding="@dimen/dim_padding"
+        android:paddingStart="@dimen/dim_padding_medium"
+        android:paddingTop="@dimen/dim_padding"
+        android:paddingEnd="@dimen/dim_padding_medium"
+        android:paddingBottom="@dimen/dim_padding"
+        android:text="@string/share"
+        android:textAllCaps="false" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/action_wallpaper"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_wallpaper_black_24dp"
+        android:drawablePadding="@dimen/dim_padding"
+        android:gravity="center_vertical"
+        android:padding="@dimen/dim_padding"
+        android:paddingStart="@dimen/dim_padding_medium"
+        android:paddingTop="@dimen/dim_padding"
+        android:paddingEnd="@dimen/dim_padding_medium"
+        android:paddingBottom="@dimen/dim_padding"
+        android:text="@string/set_wallpaper"
+        android:textAllCaps="false" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/action_cancel"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/dim_padding"
+        android:gravity="center"
+        android:paddingStart="@dimen/dim_padding_medium"
+        android:paddingTop="@dimen/dim_padding"
+        android:paddingEnd="@dimen/dim_padding_medium"
+        android:paddingBottom="@dimen/dim_padding"
+        android:text="@string/cancel"
+        android:textAllCaps="false" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,47 @@
+<resources>
+    <string name="accept">Accept</string>
+    <string name="cancel">Cancel</string>
+    <string name="close">Close</string>
+    <string name="open">Open</string>
+    <string name="select">Select</string>
+    <string name="licenses">Licenses</string>
+    <string name="settings">Settings</string>
+    <string name="change_log_version">Version</string>
+    <string name="support">Support</string>
+    <string name="we_sorry">Sorry</string>
+    <string name="no_items_found">No items was found</string>
+    <string name="default_empty_title">Without elements</string>
+    <string name="rate_us_on_cubapk">Rate on Cubapk</string>
+    <string name="rate_us_on_apkpure">Rate en APKPure</string>
+
+    <string name="search_hint_text">Search…</string>
+    <string name="share">Share</string>
+    <string name="details">Details</string>
+    <string name="set_wallpaper">Set as Wallpaper</string>
+    <string name="app_subtitle">Wallpaper for everyone…</string>
+    <string name="set_wallpaper_done">Wallpaper updated!!</string>
+    <string name="sections">Sections</string>
+    <string name="favorites">Favorites</string>
+    <string name="email_app_no_found">No email apps was found to complete the action.</string>
+    <string name="set_wallpaper_question">Do you want set this image has wallpaper?</string>
+
+    <string name="section_name1">Urban</string>
+    <string name="section_subtitle1">Urban description</string>
+    <string name="section_name2">Natural</string>
+    <string name="section_subtitle2">Natural description</string>
+    <string name="section_name3">Artistic</string>
+    <string name="section_subtitle3">Artistic description</string>
+    <string name="section_name4">Flat</string>
+    <string name="section_subtitle4">Flat description</string>
+    <string name="mark_has_favorite">Add to favorites</string>
+    <string name="unmark_from_favorites">Remove from favorites</string>
+    <string name="permissions_required">Permissions required to complete the action.</string>
+    <string name="balance">Balance</string>
+    <string name="password">Transference password</string>
+    <string name="invite_to_coffee">Invite me for a coffee</string>
+    <string name="send_balance">Send donation</string>
+    <string name="required_field">Required field</string>
+    <string name="value_cant_be_0">The value cannot be 0</string>
+    <string name="send_balance_msg">If you like the application and want to help it improve, you can make a donation to its developer by inviting him to a coffee.</string>
+
+</resources>

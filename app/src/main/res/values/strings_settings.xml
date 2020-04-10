@@ -1,0 +1,16 @@
+<resources>
+
+    <string name="language">Lenguaje</string>
+    <string name="language_summary">Seleccione el idioma en que ese mostrará la aplicación.</string>
+    <string-array name="language_values">
+        <item>Español</item>
+        <item>Inglés</item>
+    </string-array>
+
+    <string name="theme">Tema</string>
+    <string name="theme_summary">Activar tema oscuro.</string>
+
+    <string name="settings_help">Ayuda</string>
+    <string name="settings_about">Acerca de</string>
+
+</resources>

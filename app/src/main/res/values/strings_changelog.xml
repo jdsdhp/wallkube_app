@@ -1,0 +1,7 @@
+<resources>
+
+    <string name="change_log_050_version" translatable="false">0.5.0</string>
+    <string name="change_log_050_date" translatable="false">10/04/2020</string>
+    <string name="change_log_050_changes">• Lanzamiento inicial.</string>
+
+</resources>

@@ -52,20 +52,16 @@ abstract class RoomDatabaseHelper : RoomDatabase() {
         override fun doInBackground(vararg voids: Void) {
             sectionDao.insert(
                 Section(
-                    "Urban", "faker.lorem.paragraph(5)",
-                    ASSETS_DIRECTORY + "section_pics/section1.jpg"
+                    "urban", null, ASSETS_DIRECTORY + "section_pics/section1.jpg"
                 ),
                 Section(
-                    "Natural", "faker.lorem.paragraph(5)",
-                    ASSETS_DIRECTORY + "section_pics/section2.jpg"
+                    "natural", null, ASSETS_DIRECTORY + "section_pics/section2.jpg"
                 ),
                 Section(
-                    "Artistic", "faker.lorem.paragraph(5)",
-                    ASSETS_DIRECTORY + "section_pics/section3.jpg"
+                    "artistic", null, ASSETS_DIRECTORY + "section_pics/section3.jpg"
                 ),
                 Section(
-                    "Flat", "faker.lorem.paragraph(5)",
-                    ASSETS_DIRECTORY + "section_pics/section4.jpg"
+                    "flat", null, ASSETS_DIRECTORY + "section_pics/section4.jpg"
                 )
             )
             val sectionsCount = 4

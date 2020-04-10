@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Light Theme. -->
+    <style name="MyTheme.Basic.Light" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="fontFamily">@font/dosis_regular</item>
+    </style>
+
+    <style name="MyTheme.Light" parent="MyTheme.Basic.Light">
+        <item name="colorPrimary">@color/color_light</item>
+        <item name="colorPrimaryDark">@color/color_light</item>
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="colorSecondary">@color/color_light_secondary</item>
+        <item name="android:colorBackground">@color/color_light</item>
+        <item name="android:textColor">@color/color_light_text</item>
+        <item name="android:textColorPrimary">@color/color_light_text</item>
+        <item name="android:textColorSecondary">@color/color_light_text_secondary</item>
+        <item name="itemTextColor">@color/color_light_text</item>
+        <item name="android:statusBarColor">@color/color_light</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="popupTheme">@style/AppTheme.PopupOverlay.Light</item>
+        <item name="cardViewStyle">@style/CardTheme.Light</item>
+        <item name="colorSurface">?colorSecondary</item>
+        <item name="materialAlertDialogTheme">@style/MyDialog</item>
+        <item name="bottomSheetDialogTheme">@style/MyBottomSheetDialog.Light</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay.Light" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="CardTheme.Light" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">?colorSecondary</item>
+    </style>
+
+    <style name="MyBottomSheetDialog.Light" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/MyModalStyle</item>
+    </style>
+
+</resources>

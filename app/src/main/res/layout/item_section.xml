@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:foreground="?selectableItemBackground"
+    app:cardBackgroundColor="?colorSecondary"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/picture_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:alpha=".9"
+        android:scaleType="centerCrop"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_bottom_top"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:padding="@dimen/dim_padding">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/title_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_dark_text"
+            android:textSize="@dimen/dim_text_title"
+            android:textStyle="bold"
+            tools:text="@tools:sample/cities" />
+
+        <!--<androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/subtitle_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/color_dark_text_secondary"
+            tools:text="@tools:sample/lorem/random" />-->
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.cardview.widget.CardView>
+

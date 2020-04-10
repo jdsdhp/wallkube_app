@@ -1,11 +1,11 @@
 package cu.jesusd0897.wallkube.activity
 
+import android.content.DialogInterface
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.view.View.*
-import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
@@ -16,14 +16,14 @@ import cu.jesusd0897.wallkube.R
 import cu.jesusd0897.wallkube.adapter.HackyViewPager
 import cu.jesusd0897.wallkube.database.model.Picture
 import cu.jesusd0897.wallkube.database.repo.PictureRepo
-import cu.jesusd0897.wallkube.fragment.PictureFragment
+import cu.jesusd0897.wallkube.fragment.PictureViewerFragment
 import cu.jesusd0897.wallkube.transformes.ZoomOutPageTransformer
-import cu.jesusd0897.wallkube.util.IMAGE_MODELS_FLAG
-import cu.jesusd0897.wallkube.util.POSITION_FLAG
-import cu.jesusd0897.wallkube.util.setAsWallpaper
-import cu.jesusd0897.wallkube.util.sharePicture
+import cu.jesusd0897.wallkube.util.KAlert
+import cu.jesusd0897.wallkube.util.KNav
+import cu.jesusd0897.wallkube.util.KUtil
+import java.util.*
 
-class PictureDetailActivity : AppCompatActivity() {
+class PictureDetailActivity : BaseActivity() {
 
     private lateinit var toolbar: Toolbar
     private lateinit var toolbarContainer: View
@@ -40,8 +40,8 @@ class PictureDetailActivity : AppCompatActivity() {
         toolbar.setNavigationOnClickListener { onBackPressed() }
         toolbarContainer = findViewById(R.id.toolbar_container)
         fabFavorites = findViewById(R.id.fab_favorite)
-        pictures = intent.getParcelableArrayListExtra(IMAGE_MODELS_FLAG)
-        position = intent.getIntExtra(POSITION_FLAG, 0)
+        pictures = intent.getParcelableArrayListExtra(KNav.EXTRA_ITEM_TAG)!!
+        position = intent.getIntExtra(KNav.EXTRA_POSITION_TAG, 0)
         val sectionsPagerAdapter = SectionsPagerAdapter(supportFragmentManager)
         val viewPager = findViewById<HackyViewPager>(R.id.picture_page_container)
         viewPager.setPageTransformer(true, ZoomOutPageTransformer())
@@ -81,6 +81,8 @@ class PictureDetailActivity : AppCompatActivity() {
         }
     }
 
+    override fun initTheme() = setTheme(R.style.MyTheme_DarkViewer)
+
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu_image_detail, menu)
         return true
@@ -88,23 +90,27 @@ class PictureDetailActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.action_share -> sharePicture(applicationContext, pictures[position].fileName)
-            R.id.action_wallpaper -> setAsWallpaper(applicationContext, pictures[position].fileName)
-            R.id.action_info -> {
-                //TODO: Code this.
-            }
+            R.id.action_share -> KUtil.sharePicture(this, pictures[position].fileName)
+            R.id.action_wallpaper -> KAlert.buildDialog(
+                this,
+                R.string.set_wallpaper, R.string.set_wallpaper_question,
+                R.string.accept, R.string.cancel,
+                null, true,
+                DialogInterface.OnClickListener { _, _ ->
+                    KUtil.setAsWallpaper(this@PictureDetailActivity, pictures[position].fileName)
+                }, null
+            ).show()
         }
         return super.onOptionsItemSelected(item)
 
     }
 
-
     override fun onWindowFocusChanged(hasFocus: Boolean) {
         super.onWindowFocusChanged(hasFocus)
-        if (hasFocus) handleActivityDecorVisibility()
+        if (hasFocus) handleDecorVisibility()
     }
 
-    fun handleActivityDecorVisibility() {
+    fun handleDecorVisibility() {
         if (isCurrentImmersive) showSystemUI()
         else hideSystemUI()
     }
@@ -139,7 +145,7 @@ class PictureDetailActivity : AppCompatActivity() {
 
         FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
 
-        override fun getItem(position: Int): Fragment = PictureFragment.newInstance(
+        override fun getItem(position: Int): Fragment = PictureViewerFragment.newInstance(
             position, pictures[position]
         )
 

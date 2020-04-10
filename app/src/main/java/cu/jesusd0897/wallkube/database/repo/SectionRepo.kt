@@ -11,7 +11,6 @@ class SectionRepo(context: Context) : SectionDao {
     private val dao: SectionDao = RoomDatabaseHelper.getInstance(context)!!.sectionDAO()
 
     override fun get(id: String): LiveData<Section> = dao.get(id)
-
     override val all: LiveData<MutableList<Section>> get() = dao.all
 
     override fun insert(model: Section) {

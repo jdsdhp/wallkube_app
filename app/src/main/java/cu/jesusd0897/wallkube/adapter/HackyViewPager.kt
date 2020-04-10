@@ -9,11 +9,10 @@ class HackyViewPager : ViewPager {
     constructor(context: Context?) : super(context!!)
     constructor(context: Context?, attrs: AttributeSet?) : super(context!!, attrs)
 
-    override fun onInterceptTouchEvent(ev: MotionEvent): Boolean {
-        return try {
+    override fun onInterceptTouchEvent(ev: MotionEvent): Boolean =
+        try {
             super.onInterceptTouchEvent(ev)
         } catch (e: IllegalArgumentException) {
             false
         }
-    }
 }

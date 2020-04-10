@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Dark Theme. -->
+    <style name="MyTheme.Basic.Dark" parent="Theme.AppCompat.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="fontFamily">@font/dosis_regular</item>
+    </style>
+
+    <style name="MyTheme.Dark" parent="MyTheme.Basic.Dark">
+        <item name="colorPrimary">@color/color_dark</item>
+        <item name="colorPrimaryDark">@color/color_dark</item>
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="colorSecondary">@color/color_dark_secondary</item>
+        <item name="android:colorBackground">@color/color_dark</item>
+        <item name="android:textColor">@color/color_dark_text</item>
+        <item name="android:textColorPrimary">@color/color_dark_text</item>
+        <item name="android:textColorSecondary">@color/color_dark_text_secondary</item>
+        <item name="itemTextColor">@color/color_dark_text</item>
+        <item name="android:statusBarColor">@color/color_dark</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="popupTheme">@style/AppTheme.PopupOverlay.Dark</item>
+        <item name="cardViewStyle">@style/CardTheme.Dark</item>
+        <item name="colorSurface">?colorSecondary</item>
+        <item name="materialAlertDialogTheme">@style/MyDialog</item>
+        <item name="bottomSheetDialogTheme">@style/MyBottomSheetDialog.Dark</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay.Dark" parent="ThemeOverlay.AppCompat.Dark" />
+
+    <style name="CardTheme.Dark" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">?colorSecondary</item>
+    </style>
+
+    <style name="MyBottomSheetDialog.Dark" parent="Theme.Design.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/MyModalStyle</item>
+    </style>
+
+</resources>

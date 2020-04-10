@@ -13,6 +13,7 @@ class PictureRepo(context: Context) : PictureDao {
     override fun get(id: String): LiveData<Picture> = dao.get(id)
     override val all: LiveData<MutableList<Picture>> get() = dao.all
     override val favorites: LiveData<MutableList<Picture>> get() = dao.favorites
+
     override fun findBySection(sectionId: String): LiveData<MutableList<Picture>> =
         dao.findBySection(sectionId)
 

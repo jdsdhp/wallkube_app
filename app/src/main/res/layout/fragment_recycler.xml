@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/empty_placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha=".8"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/dim_padding_big">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/empty_placeholder_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim_empty_placeholder_image_size"
+            android:layout_marginBottom="@dimen/dim_margin"
+            android:alpha=".5"
+            tools:src="@tools:sample/avatars" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/empty_placeholder_tile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dim_margin_very_small"
+            android:ellipsize="end"
+            android:maxLines="4"
+            android:textAlignment="center"
+            android:textSize="@dimen/dim_text_accent"
+            android:textStyle="bold"
+            tools:text="@tools:sample/lorem" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/empty_placeholder_subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="4"
+            android:paddingBottom="@dimen/dim_padding_big"
+            android:textAlignment="center"
+            tools:text="@tools:sample/lorem/random" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_picture" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/up_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:alpha=".8"
+        android:visibility="invisible"
+        app:fabSize="mini"
+        app:srcCompat="@drawable/ic_keyboard_arrow_up_black_24dp"
+        app:useCompatPadding="true" />
+
+</FrameLayout>
